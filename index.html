@@ -22,116 +22,129 @@
             align-items: center;
             min-height: 100vh;
             
-            /* Fundo em zigue-zague azul e verde */
-            background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath fill='%23b0d235' d='M40 20l40 24V20L40 0 0 20v24z'/%3E%3Cpath fill='%23448ccb' d='M40 60l40 24V60L40 40 0 60v24z'/%3E%3C/svg%3E");
+            /* Imagem de fundo enviada (fundo.jpg) cobrindo toda a tela */
+            background-color: #0b1329;
+            background-image: url('fundo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             
             font-family: 'Roboto', sans-serif;
             box-sizing: border-box;
         }
 
+        /* Camada escura semitransparente por cima do fundo para destacar o convite */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+
         .cartao-convite {
-            /* Fundo branco garantido para o cartão */
-            background-color: #ffffff;
+            position: relative;
+            z-index: 2;
+            
+            /* Fundo escuro/lousa igual à referência */
+            background-color: #1a1a1a;
             width: 100%;
             max-width: 420px;
             
-            /* Borda azul grossa arredondada estilo o cartaz */
-            border: 12px solid #448ccb;
-            border-radius: 40px;
-            padding: 30px 20px;
+            /* Borda azul grossa com traço interno tracejado */
+            border: 10px solid #2882c9;
+            border-radius: 35px;
+            padding: 35px 20px;
             text-align: center;
             box-sizing: border-box;
             
             box-shadow: 
-                inset 0 0 0 4px #d3d3d3, 
-                0 15px 30px rgba(0,0,0,0.5);
+                inset 0 0 0 4px rgba(40, 130, 201, 0.5),
+                inset 0 0 25px rgba(0, 0, 0, 0.8),
+                0 20px 40px rgba(0,0,0,0.7);
         }
 
-        /* Imagem dos personagens no topo (ajuste para monstros.png ou monstros.jpg conforme seu arquivo) */
-        .foto-topo {
-            width: 100%;
-            max-width: 160px;
-            height: auto;
-            margin: 0 auto 10px auto;
-            display: block;
-        }
-
+        /* Título Principal no estilo Monstros S.A. */
         h1 {
             font-family: 'Waltograph', sans-serif;
-            font-size: 2.8em;
-            color: #448ccb;
-            margin: 0 0 10px 0;
+            font-size: 3em;
+            color: #2882c9;
+            margin: 0 0 15px 0;
             line-height: 1;
-            text-shadow: 2px 2px 0px #b0d235;
+            text-shadow: 2px 2px 0px #82c933, 0 0 10px rgba(40, 130, 201, 0.4);
         }
 
-        /* Foto dos gêmeos no meio */
+        /* Foto dos gêmeos centralizada */
         .foto-convite {
             width: 100%;
-            max-width: 200px;
-            height: 200px;
+            max-width: 190px;
+            height: 190px;
             object-fit: cover;
-            border-radius: 20px;
-            border: 4px solid #448ccb;
+            border-radius: 15px;
+            border: 3px solid #2882c9;
             margin: 10px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
-        /* Nomes dos gêmeos com a fonte do filme (Waltograph) em destaque */
         .nomes-gemeos {
             font-family: 'Waltograph', sans-serif;
-            font-size: 2.2em;
-            color: #448ccb;
-            margin: 15px 0 5px 0;
+            font-size: 2em;
+            color: #ffffff;
+            margin: 12px 0 3px 0;
             line-height: 1.1;
-            text-shadow: 1px 1px 0px #b0d235;
+            text-shadow: 2px 2px 0px #2882c9;
         }
 
         .texto-destaque {
-            color: #448ccb;
-            font-size: 1.05em;
+            color: #82c933;
+            font-size: 1em;
             font-weight: 900;
             text-transform: uppercase;
             margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
         .data-horario {
-            color: #448ccb;
-            font-size: 1.4em;
+            color: #ffffff;
+            font-size: 1.35em;
             font-weight: 900;
             margin: 15px 0;
-            line-height: 1.2;
+            line-height: 1.3;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
 
         .rotulo-info {
-            color: #448ccb;
-            font-size: 0.85em;
+            color: #2882c9;
+            font-size: 0.8em;
             font-weight: 700;
             margin-top: 15px;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .valor-info {
-            color: #448ccb;
-            font-size: 1.25em;
+            color: #ffffff;
+            font-size: 1.2em;
             font-weight: 900;
             text-transform: uppercase;
             margin: 3px 0;
         }
 
         .rodape-destaque {
-            color: #448ccb;
-            font-size: 0.9em;
+            color: #82c933;
+            font-size: 0.85em;
             font-weight: 900;
             margin-top: 20px;
             text-transform: uppercase;
             line-height: 1.4;
+            letter-spacing: 0.5px;
         }
 
         .rodape-sub {
-            color: #777777;
-            font-size: 0.75em;
+            color: #aaaaaa;
+            font-size: 0.7em;
             font-weight: 700;
             margin-top: 6px;
             text-transform: uppercase;
@@ -140,17 +153,16 @@
 </head>
 <body>
 
+    <!-- Camada de escurecimento para destacar o cartão -->
+    <div class="overlay"></div>
+
     <div class="cartao-convite">
         
-        <!-- Imagem do Sully e Mike no topo (confirme se salvou como monstros.png ou monstros.jpg) -->
-        <img src="monstros.png" alt="Sully e Mike" class="foto-topo">
-
         <h1>Monstros S.A.</h1>
         
         <!-- Foto dos gêmeos no meio -->
         <img src="hh.png" alt="Helena e Henrique" class="foto-convite">
 
-        <!-- Nomes na fonte do filme -->
         <div class="nomes-gemeos">Helena & Henrique</div>
         <div class="texto-destaque">fazem 1 aninho!</div>
 
@@ -160,7 +172,7 @@
 
         <div class="rotulo-info">LOCAL</div>
         <div class="valor-info">ATRÁS DO CASTELINHO</div>
-        <div class="valor-info" style="font-size: 1em; margin-top: 2px;">REFÚGIO - GTA RP</div>
+        <div class="valor-info" style="font-size: 0.95em; margin-top: 2px;">REFÚGIO - GTA RP</div>
 
         <div class="rodape-destaque">
             TRAGA SUA MELHOR RISADA,<br>ELA É NOSSA ENERGIA!
