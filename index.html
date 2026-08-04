@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convite de Aniversário - Monstros S.A.</title>
     <style>
-        /* Importação da fonte mais grossa para o corpo e a Waltograph para o título */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
         
         @font-face {
@@ -23,7 +22,7 @@
             align-items: center;
             min-height: 100vh;
             
-            /* Fundo em padrão Chevron (Zigue-Zague) Azul e Verde criado via SVG no CSS */
+            /* Fundo em zigue-zague azul e verde */
             background-color: #ffffff;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath fill='%23b0d235' d='M40 20l40 24V20L40 0 0 20v24z'/%3E%3Cpath fill='%23448ccb' d='M40 60l40 24V60L40 40 0 60v24z'/%3E%3C/svg%3E");
             
@@ -32,93 +31,100 @@
         }
 
         .cartao-convite {
+            /* Fundo branco garantido */
             background-color: #ffffff;
             width: 100%;
             max-width: 420px;
             
-            /* Borda azul grossa com formato bem arredondado */
+            /* Borda azul grossa arredondada */
             border: 12px solid #448ccb;
             border-radius: 40px;
-            padding: 35px 20px;
+            padding: 30px 20px;
             text-align: center;
             box-sizing: border-box;
             
-            /* Sombra interna cinza e sombra externa para profundidade */
             box-shadow: 
                 inset 0 0 0 4px #d3d3d3, 
                 0 15px 30px rgba(0,0,0,0.5);
         }
 
-        /* Estilo do Título Principal */
+        /* Imagem dos personagens no topo */
+        .foto-topo {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            margin: 0 auto 10px auto;
+            display: block;
+        }
+
         h1 {
             font-family: 'Waltograph', sans-serif;
-            font-size: 3.2em;
+            font-size: 3em;
             color: #448ccb;
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
             line-height: 1;
             text-shadow: 2px 2px 0px #b0d235;
         }
 
-        /* Estilo da Imagem no Meio */
+        /* Foto dos gêmeos no meio */
         .foto-convite {
             width: 100%;
-            max-width: 240px;
-            height: 240px;
+            max-width: 200px;
+            height: 200px;
             object-fit: cover;
             border-radius: 20px;
             border: 4px solid #448ccb;
-            margin: 15px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: 10px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
-        /* Estilo dos textos gerais */
         .texto-destaque {
             color: #448ccb;
-            font-size: 1.15em;
+            font-size: 1.1em;
             font-weight: 900;
             text-transform: uppercase;
-            margin: 15px 0;
+            margin: 12px 0;
             line-height: 1.3;
         }
 
         .data-horario {
             color: #448ccb;
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-weight: 900;
-            margin: 20px 0;
+            margin: 15px 0;
             line-height: 1.2;
         }
 
         .rotulo-info {
             color: #448ccb;
-            font-size: 0.9em;
+            font-size: 0.85em;
             font-weight: 700;
-            margin-top: 20px;
+            margin-top: 15px;
             text-transform: uppercase;
         }
 
         .valor-info {
             color: #448ccb;
-            font-size: 1.3em;
+            font-size: 1.25em;
             font-weight: 900;
             text-transform: uppercase;
-            margin: 4px 0;
+            margin: 3px 0;
         }
 
         .rodape-destaque {
             color: #448ccb;
-            font-size: 0.95em;
+            font-size: 0.9em;
             font-weight: 900;
-            margin-top: 25px;
+            margin-top: 20px;
             text-transform: uppercase;
             line-height: 1.4;
         }
 
         .rodape-sub {
             color: #777777;
-            font-size: 0.8em;
+            font-size: 0.75em;
             font-weight: 700;
-            margin-top: 8px;
+            margin-top: 6px;
             text-transform: uppercase;
         }
     </style>
@@ -127,11 +133,13 @@
 
     <div class="cartao-convite">
         
-        <!-- Título Principal -->
+        <!-- Imagem do topo (Sully e Mike) -> Certifique-se de subir a imagem como monstros.png -->
+        <img src="monstros.png" alt="Sully e Mike" class="foto-convite-topo" style="width: 100%; max-width: 160px; display: block; margin: 0 auto 10px auto;">
+
         <h1>Monstros S.A.</h1>
         
-        <!-- Imagem posicionada bem no meio -->
-        <img src="hh.png" alt="Foto dos gêmeos" class="foto-convite">
+        <!-- Foto dos gêmeos no meio -> Certifique-se de que o arquivo se chama exatamente hh.png -->
+        <img src="hh.png" alt="Helena e Henrique" class="foto-convite">
 
         <div class="texto-destaque">
             Helena & Henrique fazem 1 aninho!
@@ -143,7 +151,7 @@
 
         <div class="rotulo-info">LOCAL</div>
         <div class="valor-info">ATRÁS DO CASTELINHO</div>
-        <div class="valor-info" style="font-size: 1.05em; margin-top: 3px;">REFÚGIO - GTA RP</div>
+        <div class="valor-info" style="font-size: 1em; margin-top: 2px;">REFÚGIO - GTA RP</div>
 
         <div class="rodape-destaque">
             TRAGA SUA MELHOR RISADA,<br>ELA É NOSSA ENERGIA!
