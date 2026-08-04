@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Aniversário - Monstros S.A.</title>
+    <style>
+        /* Importação das fontes: Press Start 2P para os textos pixelados e Waltograph para os títulos */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap');
+        
+        @font-face {
+            font-family: 'Waltograph';
+            src: url('https://cdn.jsdelivr.net/gh/mrbubbles/waltograph-font@master/WaltographUI-Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Variáveis de cores e fontes */
+        :root {
+            --cor-fundo-principal: #0c0a1d;
+            --cor-cartao-fundo: #1a172e;
+            --cor-painel-interno: #141124;
+            --cor-texto-principal: #ffffff;
+            --cor-destaque-ouro: #f3be3a;
+            --cor-destaque-monstros: #8bd42a;
+            --cor-destaque-detalhes: #00d2c8;
+            
+            --fonte-titulo: 'Waltograph', sans-serif;
+            --fonte-pixel: 'Press Start 2P', cursive;
+            --fonte-corpo: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: var(--cor-fundo-principal);
+            color: var(--cor-texto-principal);
+            font-family: var(--fonte-corpo);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Container Principal do Convite */
+        .cartao-convite {
+            background: linear-gradient(180deg, #231f3d 0%, #171428 100%);
+            width: 100%;
+            max-width: 380px;
+            border-radius: 28px;
+            padding: 35px 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Cabeçalho */
+        .cabecalho {
+            margin-bottom: 30px;
+        }
+
+        .cabecalho .subtitulo-topo {
+            font-family: var(--fonte-pixel);
+            font-size: 0.55em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: var(--cor-destaque-ouro);
+            letter-spacing: 1px;
+        }
+
+        .cabecalho h1 {
+            font-family: var(--fonte-titulo);
+            font-size: 3em;
+            margin: 0 0 8px 0;
+            font-weight: normal;
+            line-height: 1;
+            letter-spacing: 1px;
+        }
+
+        .cabecalho h1 .parte-monstros { color: #ffffff; }
+        .cabecalho h1 .parte-sa { color: var(--cor-destaque-monstros); }
+
+        .cabecalho p {
+            font-size: 0.9em;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+        }
+
+        /* Texto Intermediário */
+        .texto-meio {
+            font-family: var(--fonte-pixel);
+            font-size: 0.55em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        /* Painel de Detalhes do Evento */
+        .detalhes-festa {
+            background-color: var(--cor-painel-interno);
+            border-radius: 16px;
+            padding: 20px;
+            border-top: 3px dashed var(--cor-destaque-detalhes);
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .titulo-detalhes {
+            font-family: var(--fonte-pixel);
+            font-size: 0.6em;
+            color: #d184ff;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .linha-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .linha-info:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Caixas de Ícones Geométricos (Sem Emojis) */
+        .icone-box {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            margin-right: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .forma-icone {
+            width: 14px;
+            height: 14px;
+            border: 2px solid #ffffff;
+            box-sizing: border-box;
+        }
+
+        .icone-data { background-color: #1a3b5c; }
+        .icone-data .forma-icone { border-radius: 2px; }
+
+        .icone-horario { background-color: #4a235a; }
+        .icone-horario .forma-icone { border-radius: 50%; }
+
+        .icone-local { background-color: #1e4d2b; }
+        .icone-local .forma-icone { transform: rotate(45deg); }
+
+        .icone-cidade { background-color: #5c431a; }
+        .icone-cidade .forma-icone { border-radius: 0; border-top: none; }
+
+        .texto-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rotulo-info {
+            font-family: var(--fonte-pixel);
+            font-size: 0.5em;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .valor-info {
+            font-size: 0.95em;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        /* Rodapé */
+        .rodape {
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+
+        .rodape .frase-destaque {
+            color: var(--cor-destaque-ouro);
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .rodape .subtexto {
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cartao-convite">
+        
+        <!-- Cabeçalho -->
+        <div class="cabecalho">
+            <div class="subtitulo-topo">✦ Convite de Aniversário ✦</div>
+            <h1><span class="parte-monstros">Monstros</span> <span class="parte-sa">S.A.</span></h1>
+            <p>as fofuras dos gêmeos completam 1 aninho!</p>
+        </div>
+
+        <!-- Texto Central -->
+        <div class="texto-meio">SETOR DE SUSTOS - PORTAS AUTORIZADAS</div>
+
+        <!-- Painel de Informações -->
+        <div class="detalhes-festa">
+            <span class="titulo-detalhes">ORDEM DE SERVIÇO DA FESTINHA</span>
+
+            <!-- Data -->
+            <div class="linha-info">
+                <div class="icone-box icone-data">
+                    <div class="forma-icone"></div>
+                </div>
+                <div class="texto-info">
+                    <span class="rotulo-info">DATA</span>
+                    <span class="valor-info">16 de Agosto</span>
+                </div>
+            </div>
+
+            <!-- Horário -->
+            <div class="linha-info">
+                <div class="icone-box icone-horario">
+                    <div class="forma-icone"></div>
+                </div>
+                <div class="texto-info">
+                    <span class="rotulo-info">HORÁRIO</span>
+                    <span class="valor-info">19h</span>
+                </div>
+            </div>
+
+            <!-- Local -->
+            <div class="linha-info">
+                <div class="icone-box icone-local">
+                    <div class="forma-icone"></div>
+                </div>
+                <div class="texto-info">
+                    <span class="rotulo-info">LOCAL</span>
+                    <span class="valor-info">Atrás do castelinho</span>
+                </div>
+            </div>
+
+            <!-- Cidade -->
+            <div class="linha-info">
+                <div class="icone-box icone-cidade">
+                    <div class="forma-icone"></div>
+                </div>
+                <div class="texto-info">
+                    <span class="rotulo-info">CIDADE - GTA RP</span>
+                    <span class="valor-info">ReFúgio</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="rodape">
+            <span class="frase-destaque">Traga sua melhor risada, ela é nossa energia!</span>
+            <p class="subtexto">Confirme presença e venha comemorar com a gente</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
