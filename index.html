@@ -31,12 +31,12 @@
         }
 
         .cartao-convite {
-            /* Fundo branco garantido */
+            /* Fundo branco garantido para o cartão */
             background-color: #ffffff;
             width: 100%;
             max-width: 420px;
             
-            /* Borda azul grossa arredondada */
+            /* Borda azul grossa arredondada estilo o cartaz */
             border: 12px solid #448ccb;
             border-radius: 40px;
             padding: 30px 20px;
@@ -48,10 +48,10 @@
                 0 15px 30px rgba(0,0,0,0.5);
         }
 
-        /* Imagem dos personagens no topo */
+        /* Imagem dos personagens no topo (ajuste para monstros.png ou monstros.jpg conforme seu arquivo) */
         .foto-topo {
             width: 100%;
-            max-width: 180px;
+            max-width: 160px;
             height: auto;
             margin: 0 auto 10px auto;
             display: block;
@@ -59,7 +59,7 @@
 
         h1 {
             font-family: 'Waltograph', sans-serif;
-            font-size: 3em;
+            font-size: 2.8em;
             color: #448ccb;
             margin: 0 0 10px 0;
             line-height: 1;
@@ -78,13 +78,22 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
+        /* Nomes dos gêmeos com a fonte do filme (Waltograph) em destaque */
+        .nomes-gemeos {
+            font-family: 'Waltograph', sans-serif;
+            font-size: 2.2em;
+            color: #448ccb;
+            margin: 15px 0 5px 0;
+            line-height: 1.1;
+            text-shadow: 1px 1px 0px #b0d235;
+        }
+
         .texto-destaque {
             color: #448ccb;
-            font-size: 1.1em;
+            font-size: 1.05em;
             font-weight: 900;
             text-transform: uppercase;
-            margin: 12px 0;
-            line-height: 1.3;
+            margin-bottom: 15px;
         }
 
         .data-horario {
@@ -133,17 +142,17 @@
 
     <div class="cartao-convite">
         
-        <!-- Imagem do topo (Sully e Mike) -> Certifique-se de subir a imagem como monstros.png -->
-        <img src="monstros.png" alt="Sully e Mike" class="foto-convite-topo" style="width: 100%; max-width: 160px; display: block; margin: 0 auto 10px auto;">
+        <!-- Imagem do Sully e Mike no topo (confirme se salvou como monstros.png ou monstros.jpg) -->
+        <img src="monstros.png" alt="Sully e Mike" class="foto-topo">
 
         <h1>Monstros S.A.</h1>
         
-        <!-- Foto dos gêmeos no meio -> Certifique-se de que o arquivo se chama exatamente hh.png -->
+        <!-- Foto dos gêmeos no meio -->
         <img src="hh.png" alt="Helena e Henrique" class="foto-convite">
 
-        <div class="texto-destaque">
-            Helena & Henrique fazem 1 aninho!
-        </div>
+        <!-- Nomes na fonte do filme -->
+        <div class="nomes-gemeos">Helena & Henrique</div>
+        <div class="texto-destaque">fazem 1 aninho!</div>
 
         <div class="data-horario">
             16 DE AGOSTO<br>ÀS 19H
