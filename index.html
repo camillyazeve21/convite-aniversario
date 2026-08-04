@@ -7,9 +7,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
         
+        /* Importando a fonte oficial Monster AG */
         @font-face {
-            font-family: 'Waltograph';
-            src: url('https://cdn.jsdelivr.net/gh/mrbubbles/waltograph-font@master/WaltographUI-Bold.ttf') format('truetype');
+            font-family: 'MonsterAG';
+            src: url('Monster AG.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -45,7 +46,7 @@
             z-index: 1;
         }
 
-        /* Cartão maior e mais largo */
+        /* Cartão principal */
         .cartao-convite {
             position: relative;
             z-index: 2;
@@ -65,14 +66,15 @@
                 0 25px 50px rgba(0,0,0,0.8);
         }
 
-        /* Título Principal */
+        /* Título Principal com a fonte Monster AG */
         h1 {
-            font-family: 'Waltograph', sans-serif;
-            font-size: 3.2em;
+            font-family: 'MonsterAG', sans-serif;
+            font-size: 2.8em;
             color: #2882c9;
             margin: 0 0 10px 0;
-            line-height: 1;
+            line-height: 1.1;
             text-shadow: 2px 2px 0px #82c933, 0 0 12px rgba(40, 130, 201, 0.5);
+            letter-spacing: 1px;
         }
 
         /* Foto dos gêmeos centralizada */
@@ -88,8 +90,8 @@
         }
 
         .nomes-gemeos {
-            font-family: 'Waltograph', sans-serif;
-            font-size: 2.1em;
+            font-family: 'MonsterAG', sans-serif;
+            font-size: 1.9em;
             color: #ffffff;
             margin: 10px 0 2px 0;
             line-height: 1.1;
@@ -147,7 +149,7 @@
             letter-spacing: 1px;
         }
 
-        /* Bloco de Endereço com fundo azulado igual ao local da festa */
+        /* Bloco de Endereço com fundo azulado */
         .bloco-endereco {
             margin: 20px 0;
             background-color: #2882c9;
@@ -176,7 +178,7 @@
             text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
         }
 
-        /* Rodapé com fundo azulado combinando com o bloco de endereço */
+        /* Rodapé com fundo azulado */
         .rodape-destaque {
             background-color: #2882c9;
             color: #ffffff;
@@ -201,12 +203,23 @@
             text-transform: uppercase;
         }
 
-        /* Imagem do Sully e Mike flutuando no canto */
+        /* Sully e Mike no canto inferior direito */
         .personagens-lateral {
             position: absolute;
             bottom: -30px;
-            right: -25px;
-            width: 140px;
+            right: -30px;
+            width: 135px;
+            height: auto;
+            z-index: 10;
+            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.7));
+        }
+
+        /* Boo no canto inferior esquerdo */
+        .boo-lateral {
+            position: absolute;
+            bottom: -20px;
+            left: -35px;
+            width: 110px;
             height: auto;
             z-index: 10;
             filter: drop-shadow(0 10px 10px rgba(0,0,0,0.7));
@@ -219,8 +232,11 @@
 
     <div class="cartao-convite">
         
-        <!-- Imagem do Sully e Mike (monstros.png) -->
-        <img src="sully e mike.png" alt="Sully e Mike" class="personagens-lateral">
+        <!-- Sully e Mike na direita -->
+        <img src="monstros.png" alt="Sully e Mike" class="personagens-lateral">
+        
+        <!-- Boo na esquerda -->
+        <img src="boo.png" alt="Boo" class="boo-lateral">
 
         <h1>Monstros S.A.</h1>
         
@@ -242,14 +258,14 @@
             </div>
         </div>
 
-        <!-- Endereço com fundo azulado -->
+        <!-- Endereço -->
         <div class="bloco-endereco">
             <div class="rotulo-info">Local</div>
             <div class="valor-info">Atrás do Castelinho</div>
             <div class="valor-info" style="font-size: 0.95em; color: #82c933;">Refúgio - GTA RP</div>
         </div>
 
-        <!-- Frase alterada com fundo azulado -->
+        <!-- Frase customizada -->
         <div class="rodape-destaque">
             Venha de fantasia e embarque nessa aventura em Monstrópolis!
         </div>
