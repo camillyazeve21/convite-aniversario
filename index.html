@@ -36,14 +36,14 @@
             width: 100%;
             max-width: 420px;
             
-            /* Borda azul grossa com formato bem arredondado lembrando a moldura da imagem */
+            /* Borda azul grossa com formato bem arredondado */
             border: 12px solid #448ccb;
             border-radius: 40px;
-            padding: 45px 20px;
+            padding: 35px 20px;
             text-align: center;
             box-sizing: border-box;
             
-            /* Sombra interna cinza para imitar o traço duplo de dentro e sombra externa para profundidade */
+            /* Sombra interna cinza e sombra externa para profundidade */
             box-shadow: 
                 inset 0 0 0 4px #d3d3d3, 
                 0 15px 30px rgba(0,0,0,0.5);
@@ -52,62 +52,73 @@
         /* Estilo do Título Principal */
         h1 {
             font-family: 'Waltograph', sans-serif;
-            font-size: 3.4em;
+            font-size: 3.2em;
             color: #448ccb;
-            margin: 0 0 25px 0;
+            margin: 0 0 15px 0;
             line-height: 1;
-            /* Sombra verde sutil para dar o efeito de destaque das cores da universidade */
             text-shadow: 2px 2px 0px #b0d235;
+        }
+
+        /* Estilo da Imagem no Meio */
+        .foto-convite {
+            width: 100%;
+            max-width: 240px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid #448ccb;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         /* Estilo dos textos gerais */
         .texto-destaque {
             color: #448ccb;
-            font-size: 1.3em;
+            font-size: 1.15em;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 25px;
+            margin: 15px 0;
             line-height: 1.3;
         }
 
         .data-horario {
             color: #448ccb;
-            font-size: 1.6em;
+            font-size: 1.5em;
             font-weight: 900;
-            margin: 25px 0;
+            margin: 20px 0;
             line-height: 1.2;
         }
 
         .rotulo-info {
             color: #448ccb;
-            font-size: 1em;
+            font-size: 0.9em;
             font-weight: 700;
-            margin-top: 25px;
+            margin-top: 20px;
             text-transform: uppercase;
         }
 
         .valor-info {
             color: #448ccb;
-            font-size: 1.4em;
+            font-size: 1.3em;
             font-weight: 900;
             text-transform: uppercase;
-            margin: 5px 0;
+            margin: 4px 0;
         }
 
         .rodape-destaque {
             color: #448ccb;
-            font-size: 1em;
+            font-size: 0.95em;
             font-weight: 900;
-            margin-top: 35px;
+            margin-top: 25px;
             text-transform: uppercase;
             line-height: 1.4;
         }
 
         .rodape-sub {
             color: #777777;
-            font-size: 0.85em;
+            font-size: 0.8em;
             font-weight: 700;
-            margin-top: 10px;
+            margin-top: 8px;
             text-transform: uppercase;
         }
     </style>
@@ -116,11 +127,14 @@
 
     <div class="cartao-convite">
         
-        <!-- Título na fonte Waltograph mantida -->
+        <!-- Título Principal -->
         <h1>Monstros S.A.</h1>
         
+        <!-- Imagem posicionada bem no meio -->
+        <img src="hh.png" alt="Foto dos gêmeos" class="foto-convite">
+
         <div class="texto-destaque">
-            AS FOFURAS DOS GÊMEOS<br>COMPLETAM 1 ANINHO!
+            Helena & Henrique fazem 1 aninho!
         </div>
 
         <div class="data-horario">
@@ -129,7 +143,7 @@
 
         <div class="rotulo-info">LOCAL</div>
         <div class="valor-info">ATRÁS DO CASTELINHO</div>
-        <div class="valor-info" style="font-size: 1.1em; margin-top: 5px;">REFÚGIO - GTA RP</div>
+        <div class="valor-info" style="font-size: 1.05em; margin-top: 3px;">REFÚGIO - GTA RP</div>
 
         <div class="rodape-destaque">
             TRAGA SUA MELHOR RISADA,<br>ELA É NOSSA ENERGIA!
