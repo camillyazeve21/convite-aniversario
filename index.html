@@ -22,7 +22,7 @@
             align-items: center;
             min-height: 100vh;
             
-            /* Imagem de fundo enviada (fundo.jpg) cobrindo toda a tela */
+            /* Imagem de fundo da fábrica (fundo.jpg) */
             background-color: #0b1329;
             background-image: url('fundo.jpg');
             background-size: cover;
@@ -31,112 +31,153 @@
             
             font-family: 'Roboto', sans-serif;
             box-sizing: border-box;
+            overflow-x: hidden;
         }
 
-        /* Camada escura semitransparente por cima do fundo para destacar o convite */
+        /* Camada escura para destacar o convite */
         .overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
 
+        /* Cartão maior e mais largo */
         .cartao-convite {
             position: relative;
             z-index: 2;
-            
-            /* Fundo escuro/lousa igual à referência */
             background-color: #1a1a1a;
             width: 100%;
-            max-width: 420px;
+            max-width: 480px;
             
-            /* Borda azul grossa com traço interno tracejado */
             border: 10px solid #2882c9;
-            border-radius: 35px;
-            padding: 35px 20px;
+            border-radius: 40px;
+            padding: 40px 25px;
             text-align: center;
             box-sizing: border-box;
             
             box-shadow: 
                 inset 0 0 0 4px rgba(40, 130, 201, 0.5),
-                inset 0 0 25px rgba(0, 0, 0, 0.8),
-                0 20px 40px rgba(0,0,0,0.7);
+                inset 0 0 30px rgba(0, 0, 0, 0.9),
+                0 25px 50px rgba(0,0,0,0.8);
         }
 
-        /* Título Principal no estilo Monstros S.A. */
+        /* Título Principal */
         h1 {
             font-family: 'Waltograph', sans-serif;
-            font-size: 3em;
+            font-size: 3.2em;
             color: #2882c9;
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
             line-height: 1;
-            text-shadow: 2px 2px 0px #82c933, 0 0 10px rgba(40, 130, 201, 0.4);
+            text-shadow: 2px 2px 0px #82c933, 0 0 12px rgba(40, 130, 201, 0.5);
         }
 
         /* Foto dos gêmeos centralizada */
         .foto-convite {
             width: 100%;
-            max-width: 190px;
-            height: 190px;
+            max-width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 15px;
             border: 3px solid #2882c9;
-            margin: 10px 0;
+            margin: 8px 0;
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
         .nomes-gemeos {
             font-family: 'Waltograph', sans-serif;
-            font-size: 2em;
+            font-size: 2.1em;
             color: #ffffff;
-            margin: 12px 0 3px 0;
+            margin: 10px 0 2px 0;
             line-height: 1.1;
             text-shadow: 2px 2px 0px #2882c9;
         }
 
         .texto-destaque {
             color: #82c933;
-            font-size: 1em;
+            font-size: 1.05em;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             letter-spacing: 1px;
         }
 
-        .data-horario {
+        /* Estilo Data e Horário Lado a Lado com Linha Pontilhada (como na ref) */
+        .bloco-data-horario {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+            padding: 10px 0;
+            border-top: 2px dashed rgba(40, 130, 201, 0.3);
+            border-bottom: 2px dashed rgba(40, 130, 201, 0.3);
+        }
+
+        .bloco-data-horario::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 50%;
+            width: 2px;
+            border-left: 2px dotted #82c933;
+            transform: translateX(-50%);
+        }
+
+        .item-dh {
+            width: 50%;
+            text-align: center;
             color: #ffffff;
-            font-size: 1.35em;
             font-weight: 900;
-            margin: 15px 0;
+            text-transform: uppercase;
+            font-size: 1.15em;
             line-height: 1.3;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
 
-        .rotulo-info {
+        .item-dh span {
+            display: block;
             color: #2882c9;
             font-size: 0.8em;
+            margin-bottom: 2px;
+            letter-spacing: 1px;
+        }
+
+        /* Bloco de Endereço */
+        .bloco-endereco {
+            margin: 20px 0;
+            background: rgba(40, 130, 201, 0.15);
+            padding: 12px;
+            border-radius: 15px;
+            border: 1px solid rgba(40, 130, 201, 0.4);
+        }
+
+        .rotulo-info {
+            color: #2882c9;
+            font-size: 0.85em;
             font-weight: 700;
-            margin-top: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 4px;
         }
 
         .valor-info {
             color: #ffffff;
-            font-size: 1.2em;
+            font-size: 1.15em;
             font-weight: 900;
             text-transform: uppercase;
-            margin: 3px 0;
+            margin: 2px 0;
         }
 
         .rodape-destaque {
             color: #82c933;
-            font-size: 0.85em;
+            font-size: 0.9em;
             font-weight: 900;
-            margin-top: 20px;
+            margin-top: 15px;
             text-transform: uppercase;
             line-height: 1.4;
             letter-spacing: 0.5px;
@@ -144,42 +185,66 @@
 
         .rodape-sub {
             color: #aaaaaa;
-            font-size: 0.7em;
+            font-size: 0.75em;
             font-weight: 700;
             margin-top: 6px;
             text-transform: uppercase;
+        }
+
+        /* Imagem do Sully e Mike flutuando no canto ou rodapé */
+        .personagens-lateral {
+            position: absolute;
+            bottom: -30px;
+            right: -25px;
+            width: 140px;
+            height: auto;
+            z-index: 10;
+            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.7));
         }
     </style>
 </head>
 <body>
 
-    <!-- Camada de escurecimento para destacar o cartão -->
     <div class="overlay"></div>
 
     <div class="cartao-convite">
         
+        <!-- Imagem do Sully e Mike que você enviou (salva como monstros.png) -->
+        <img src="monstros.png" alt="Sully e Mike" class="personagens-lateral">
+
         <h1>Monstros S.A.</h1>
         
-        <!-- Foto dos gêmeos no meio -->
+        <!-- Foto dos gêmeos -->
         <img src="hh.png" alt="Helena e Henrique" class="foto-convite">
 
         <div class="nomes-gemeos">Helena & Henrique</div>
         <div class="texto-destaque">fazem 1 aninho!</div>
 
-        <div class="data-horario">
-            16 DE AGOSTO<br>ÀS 19H
+        <!-- Data e Horário lado a lado com pontilhado -->
+        <div class="bloco-data-horario">
+            <div class="item-dh">
+                <span>Data</span>
+                16 de<br>Agosto
+            </div>
+            <div class="item-dh">
+                <span>Horário</span>
+                19:00<br>Horas
+            </div>
         </div>
 
-        <div class="rotulo-info">LOCAL</div>
-        <div class="valor-info">ATRÁS DO CASTELINHO</div>
-        <div class="valor-info" style="font-size: 0.95em; margin-top: 2px;">REFÚGIO - GTA RP</div>
+        <!-- Endereço -->
+        <div class="bloco-endereco">
+            <div class="rotulo-info">Local</div>
+            <div class="valor-info">Atrás do Castelinho</div>
+            <div class="valor-info" style="font-size: 0.95em; color: #82c933;">Refúgio - GTA RP</div>
+        </div>
 
         <div class="rodape-destaque">
-            TRAGA SUA MELHOR RISADA,<br>ELA É NOSSA ENERGIA!
+            Traga sua melhor risada,<br>ela é nossa energia!
         </div>
         
         <div class="rodape-sub">
-            CONFIRME PRESENÇA E VENHA COMEMORAR
+            Confirme presença e venha comemorar
         </div>
 
     </div>
